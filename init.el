@@ -27,8 +27,8 @@
 ;; Clicker trained UwU
 ;;(setq ring-bell-function 'ignore)
 
-;; BASED
-(setq inhibit-startup-screen t)
+;; !BASED
+;(setq inhibit-startup-screen t)
 
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
 (display-time-mode 1)
@@ -201,6 +201,11 @@
 (provide 'earl-mode)
 ;; End Earl mode
 
+;; OCaml
+(add-to-list 'load-path "/home/oddstap/.opam/default/share/emacs/site-lisp")
+(require 'ocp-indent)
+
+;; C++
 (add-hook 'c++-mode-hook
           (lambda ()
             (setq c-default-style "bsd")
